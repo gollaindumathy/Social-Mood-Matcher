@@ -1,0 +1,84 @@
+.home-hero {
+    padding: 20px 0 32px;
+}
+
+.home-hero h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 8px;
+}
+
+.home-subtitle {
+    font-size: 17px;
+    color: var(--text-secondary);
+}
+
+/* Mood Form */
+.mood-form {
+    margin-bottom: 40px;
+}
+
+.mood-picker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.mood-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 14px 8px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.18s ease;
+    cursor: pointer;
+}
+
+.mood-pill:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.04);
+}
+
+.mood-emoji {
+    font-size: 26px;
+}
+
+.mood-description-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.mood-textarea {
+    resize: none;
+}
+
+/* Sections */
+.home-section {
+    margin-bottom: 40px;
+}
+
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+}
+
+.feed-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

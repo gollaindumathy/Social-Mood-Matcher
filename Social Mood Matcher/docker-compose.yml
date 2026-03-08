@@ -1,0 +1,32 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: moodmatcher-api
+    ports:
+      - "5050:5000"
+    volumes:
+      - sqlite-data:/app/data
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/moodmatcher.db
+      - JwtSettings__Secret=SocialMoodMatcher_SuperSecretKey_ChangeMeInProd_2025!
+      - JwtSettings__Issuer=SocialMoodMatcherAPI
+      - JwtSettings__Audience=SocialMoodMatcherClient
+      - JwtSettings__ExpirationHours=24
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: moodmatcher-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  sqlite-data:

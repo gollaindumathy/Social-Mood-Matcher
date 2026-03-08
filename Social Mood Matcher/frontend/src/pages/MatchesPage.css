@@ -1,0 +1,43 @@
+.matches-header {
+    padding: 20px 0 24px;
+}
+
+.matches-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.matches-subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+.matches-count {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.matches-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    padding: 0 8px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--purple), var(--pink));
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 14px;
+}

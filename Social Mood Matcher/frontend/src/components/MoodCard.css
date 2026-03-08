@@ -1,0 +1,68 @@
+.mood-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    transition: border-color var(--transition), background var(--transition);
+}
+
+.mood-card:hover {
+    border-color: var(--border-glow);
+    background: var(--bg-card-hover);
+}
+
+.mood-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+}
+
+.mood-card-user {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.mood-card-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.mood-card-time {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.mood-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.mood-card-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    padding-left: 52px;
+}
